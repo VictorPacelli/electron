@@ -3,7 +3,12 @@ const { app, BrowserWindow } = require('electron')
 const createWindow = () => {
     let window = new BrowserWindow({
         width: 500,
-        height: 500
+        height: 500,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+            devTools: true, 
+          },
     })
     window.loadFile('index.html')
 }
