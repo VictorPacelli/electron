@@ -8,5 +8,22 @@
 <body>
     <h1> Inciando em electron</h1>
     <h1> Inciando em electron</h1>
+    <h6 id="node">Versão Node:</h6>
+    <h6 id="chrome">Versão Chrome:</h6>
+    <h6 id="electron">Versão Electron:</h6>
+
+    <script>
+        document.getElementById('node').innerText +=' '+ window.versions.node();
+        document.getElementById('chrome').innerText += ' '+window.versions.chrome();
+        document.getElementById('electron').innerText += ' '+window.versions.electron();
+
+        const func = async () =>{
+            let response = await window.versions.ping('oi','olar')
+            console.log(response)
+        }
+
+        func()
+
+    </script>
 </body>
 </html>
